@@ -1,10 +1,10 @@
 #METODO ITERATIVO 2
 
+	# r = n * (n+1) 
+	# r = r * (n+2)
+	# r = r * (n+3)
+	# r = r * (n+4)
 def factorial_iterative(n)
-	r = n * (n+1) 
-	r = r * (n+2)
-	r = r * (n+3)
-	r = r * (n+4)
 	r = 1
 	for i in (1...n)
 	   r = r * (i+1)
@@ -15,7 +15,13 @@ end
 
 #METODO ITERATIVO 2
 def factorial_iterative2(n)
-	(1..n).inject(&:*)
+	if n == 0
+		1
+	elsif n > 0
+		(1..n).inject(&:*)
+	end
+	
+	
 end
 
 #METODO RECURSIVO
